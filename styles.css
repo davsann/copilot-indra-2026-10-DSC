@@ -266,7 +266,7 @@ h2 {
 }
 
 .clock-label {
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   color: #68736a;
   font-size: 10px;
   font-weight: 600;
@@ -282,8 +282,17 @@ h2 {
   border-radius: 50%;
   background:
     radial-gradient(circle, var(--paper) 66%, transparent 67%),
-    repeating-conic-gradient(from -0.5deg, #59665d 0deg 1deg, transparent 1deg 6deg);
-  box-shadow: 0 8px 22px rgb(32 53 44 / 8%);
+    repeating-conic-gradient(from -0.5deg, #aeb5aa 0deg 1deg, transparent 1deg 6deg);
+  box-shadow: 0 10px 28px rgb(32 53 44 / 7%);
+}
+
+.clock-face::before {
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgb(89 102 93 / 16%);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
 }
 
 .clock-number {
@@ -330,7 +339,7 @@ h2 {
 }
 
 .clock-hand-hour {
-  width: 4px;
+  width: 5px;
   height: 24%;
   background: var(--ink);
   --hand-angle: var(--hour-angle, 0deg);
@@ -339,7 +348,7 @@ h2 {
 .clock-hand-minute {
   width: 3px;
   height: 35%;
-  background: var(--ink);
+  background: #59665d;
   --hand-angle: var(--minute-angle, 0deg);
 }
 
@@ -347,6 +356,7 @@ h2 {
   width: 1px;
   height: 39%;
   background: var(--rust);
+  box-shadow: 0 0 3px rgb(185 84 54 / 22%);
   --hand-angle: var(--second-angle, 0deg);
 }
 
